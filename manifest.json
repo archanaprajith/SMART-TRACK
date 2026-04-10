@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "SmartTrack: Procrastination Trap",
+  "version": "1.1",
+  "description": "Transforms your YouTube homepage into a curated Study Hub and blocks distracting searches.",
+  "permissions": ["storage", "tabs"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SmartTrack Dashboard"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
